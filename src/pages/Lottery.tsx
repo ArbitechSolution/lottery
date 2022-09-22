@@ -794,29 +794,7 @@ const Lottery = () => {
                     </Button>
                   </Center>
                 }
-                <Center my='10'>
-
-                  <Button
-                    // focusBorderColor="none"
-                    id="swap_button"
-                    border="1px"
-                    w="55%"
-                    h="40px"
-                    borderRadius="5"
-                    color={colorMode === "dark" ? "white" : "black"}
-                    backgroundColor={
-                      colorMode === "dark" ? "black" : "white"
-                    }
-                    fontFamily="Ropa Sans"
-                    fontSize={"19px"}
-                    fontWeight="150"
-                    onClick={() => {
-                      setLotteryCard(true);
-                    }}
-                  >
-                    Buy Ticket
-                  </Button>
-                </Center>
+                
 
               </Box>
             </Box>
