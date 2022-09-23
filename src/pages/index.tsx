@@ -15,29 +15,29 @@ import rehypeRaw from "rehype-raw";
 import rehypeSanitize from "rehype-sanitize";
 import rehypeStringify from "rehype-stringify";
 import Lottery from "./lottery";
-
 type TProps = {
   logs: string;
 };
 
-
-
 const Home: NextPage<TProps> = ({ logs }) => {
-
-  const { dispatch } = useAppState()
+  const { dispatch } = useAppState();
 
   useEffect(() => {
     dispatch({
       type: ACTIONS.SET_LOGS,
       payload: logs,
-    })
-  }, [logs, dispatch])
-return <Lottery/>
+    });
+  }, [logs, dispatch]);
+  return <Lottery />;
 };
 
 export async function getServerSideProps({ req }: NextPageContext) {
-  const md = new MobileDetect(req?.headers['user-agent'] ?? '')
-  const logs = await (await fetch('https://raw.githubusercontent.com/babyloniaapp/docs/main/logs.md')).text()
+  const md = new MobileDetect(req?.headers["user-agent"] ?? "");
+  const logs = await (
+    await fetch(
+      "https://raw.githubusercontent.com/babyloniaapp/docs/main/logs.md"
+    )
+  ).text();
   var content = "";
 
   await unified()
@@ -49,20 +49,17 @@ export async function getServerSideProps({ req }: NextPageContext) {
     .use(rehypeSanitize)
     .use(rehypeStringify)
     .process(logs)
-    .then(
-      (file) => {
-        content = file.value.toString();
-        // console.log(file.value);
-      }
-    )
-    .catch((err) => { });
+    .then((file) => {
+      content = file.value.toString();
+      // console.log(file.value);
+    })
+    .catch((err) => {});
 
-      
   return {
     props: {
       logs: content,
     },
-  }
+  };
 }
 
 export default Home;

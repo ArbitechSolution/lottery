@@ -1,4 +1,6 @@
 import "../styles/globals.css";
+import "./index.css";
+
 //  import "@styles/grayscale.css";
 import Head from "next/head";
 import type { AppProps } from "next/app";
@@ -70,7 +72,11 @@ function MyApp({ Component, pageProps }: AppProps) {
         `,
                   }}
                 />
-                <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+                <script
+                  src="https://www.google.com/recaptcha/api.js"
+                  async
+                  defer
+                ></script>
               </>
               <title> Pool | Babylonia.app </title>
               <link rel="shortcut icon" href="/BABY.png" />

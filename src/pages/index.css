@@ -1,0 +1,41 @@
+.css-1tbug2e,
+.css-ln7qe4,
+.css-k008qs,
+.css-a059z1 {
+  border-radius: 32px !important;
+}
+.css-ux9nxf {
+  background: linear-gradient(
+    rgb(118, 69, 217) 0%,
+    rgb(69, 42, 122) 100%
+  ) !important;
+  color: aliceblue !important;
+}
+.css-111sjxm,
+.css-1alsgps {
+  position: relative;
+  -webkit-box-align: center;
+  align-items: center;
+  border: 0px !important;
+  border-radius: 16px !important;
+  box-shadow: rgb(14 14 44 / 40%) 0px -1px 0px 0px inset !important;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: inherit;
+  font-size: 16px !important;
+  font-weight: 600;
+  -webkit-box-pack: center;
+  justify-content: center;
+  letter-spacing: 0.03em !important;
+  line-height: 1;
+  opacity: 1 !important;
+  outline: 0px;
+  transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s !important;
+  height: 48px !important;
+  padding: 0px 24px !important;
+  background-color: #1fc7d4 !important;
+  color: white !important;
+}
+.css-ftsnli {
+  top: 1rem !important;
+}
